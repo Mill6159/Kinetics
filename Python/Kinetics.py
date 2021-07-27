@@ -20,7 +20,8 @@ class Main:
   def __init__(self, expt_name, temp):
     self.expt_name = expt_name
     self.temp = temp
-    print("Experiment Name: ", expt_name)
+    print('Initializing Main Kinetics Class')
+    # print("Experiment Name: ", expt_name)
 
 
 # Main Calculation class below
@@ -311,7 +312,7 @@ class Calculations(Main):
 
 # Export Class/File Parser
 
-# Test code here!
+# CP Binding
 
 calcs = Calculations(
                      expt_name = 'CP Binding', 
@@ -319,8 +320,38 @@ calcs = Calculations(
                      kd=14
                      )
 
+# calcs.pL = np.linspace(1,500,500)
+# calcs.bindingCurve_1t1()
+# calcs.pL = np.linspace(1,100,500)
+# calcs.bindingCurve_1t1()
+
+# ## Succinate Binding
+# calcs.pL = np.linspace(1,10000,500)
+# calcs.expt_name = 'Succinate Binding'
+# calcs.kd = 560
+# calcs.bindingCurve_1t1()
+
+
+### Change Protein Concentration
+
+# CP Binding
+
+calcs.pc = 1.0 # change protein conc. to 1 uM
 calcs.pL = np.linspace(1,500,500)
 calcs.bindingCurve_1t1()
 calcs.pL = np.linspace(1,100,500)
 calcs.bindingCurve_1t1()
+
+## Succinate Binding
+calcs.pL = np.linspace(1,10000,500)
+calcs.expt_name = 'Succinate Binding'
+calcs.kd = 560
+calcs.bindingCurve_1t1()
+
+
+
+
+
+
+
 
