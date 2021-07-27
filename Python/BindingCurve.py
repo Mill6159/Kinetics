@@ -315,28 +315,12 @@ class Calculations(Main):
 # CP Binding
 
 calcs = Calculations(
-                     expt_name = 'CP Binding', 
+                     expt_name = 'CP_Binding', 
                      temp = "20", 
-                     kd=14
+                     kd=14,
+                     pc=8 # uM
                      )
 
-# calcs.pL = np.linspace(1,500,500)
-# calcs.bindingCurve_1t1()
-# calcs.pL = np.linspace(1,100,500)
-# calcs.bindingCurve_1t1()
-
-# ## Succinate Binding
-# calcs.pL = np.linspace(1,10000,500)
-# calcs.expt_name = 'Succinate Binding'
-# calcs.kd = 560
-# calcs.bindingCurve_1t1()
-
-
-### Change Protein Concentration
-
-# CP Binding
-
-calcs.pc = 1.0 # change protein conc. to 1 uM
 calcs.pL = np.linspace(1,500,500)
 calcs.bindingCurve_1t1()
 calcs.pL = np.linspace(1,100,500)
@@ -345,6 +329,24 @@ calcs.bindingCurve_1t1()
 ## Succinate Binding
 calcs.pL = np.linspace(1,10000,500)
 calcs.expt_name = 'Succinate Binding'
+calcs.kd = 560
+calcs.bindingCurve_1t1()
+
+
+### Change Protein Concentration
+
+# CP Binding
+
+calcs.pc = 1.0 # change protein conc. to 1 uM
+calcs.expt_name = 'CP_Binding'
+calcs.pL = np.linspace(1,500,500)
+calcs.bindingCurve_1t1()
+calcs.pL = np.linspace(1,100,500)
+calcs.bindingCurve_1t1()
+
+## Succinate Binding
+calcs.pL = np.linspace(1,10000,500)
+calcs.expt_name = 'Succinate_Binding'
 calcs.kd = 560
 calcs.bindingCurve_1t1()
 
